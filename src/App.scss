@@ -1,0 +1,37 @@
+.App {
+  text-align: center;
+}
+
+.body {
+  background-color: #FBFBFD;
+}
+.body-height {
+  // height: calc(100vh - 3rem);
+  height: 100%;
+}
+
+.body-width {
+  width: calc(100vw - 16.666667%);
+}
+
+.hl {
+  background-color: azure;
+}
+
+.bdr {
+  border: 1px solid #EBEEF5;
+}
+
+.profileImage {
+  margin: 2em auto;
+
+  .userStatus {
+    bottom: -1em;
+    right: -0.5em;
+    height: 6px;
+    width: 6px;
+  }
+}
+.sidebarSectionHeight {
+  height: 200px;
+}
