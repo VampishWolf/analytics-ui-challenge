@@ -22,16 +22,23 @@
   border: 1px solid #EBEEF5;
 }
 
-.profileImage {
+.profile-image {
   margin: 2em auto;
 
-  .userStatus {
-    bottom: -1em;
+  .user-status {
+    bottom: -1.5em;
     right: -0.5em;
     height: 6px;
-    width: 6px;
+    width: 5px;
   }
 }
-.sidebarSectionHeight {
+
+.sidebar-section-height {
   height: 200px;
+}
+
+.side-links {
+  a:hover, a:active{
+    color: #1E6ADA;
+  }
 }
