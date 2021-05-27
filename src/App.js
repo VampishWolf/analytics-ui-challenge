@@ -10,8 +10,8 @@ function App() {
   return ( 
     <div className="App divide-y">
       <header className="flex h-12 divide-x">
-        <div className="flex-none w-64 m-auto"><i className="fa fa-home"></i></div>
-        <div className="flex-grow font-semibold m-auto text-left pl-4">
+        <div className="flex-none w-64 m-auto hover"><i className="fa fa-home"></i></div>
+        <div className="flex-grow font-semibold m-auto text-left pl-4 hover">
           Dashboard
           <select name="country" id="country" className="flex-none pr-4 mx-6 float-right border-2 border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-100">
             <option value="ENG">ENG</option>
@@ -67,7 +67,7 @@ function App() {
             <a href="#" className="block text-left m-3 ml-0 text-gray-600 text-xs outline-none">Customer: Minerva Viewer
             <i className="fas fa-long-arrow-alt-right float-right text-gray-400"></i></a>
           </div>
-          <div className="text-sm font-semibold">
+          <div className="text-sm font-semibold object-bottom ">
             <p className="text-xs text-gray-600 m-2 ml-8 text-left">Page: dribble.com/janlosert</p>
             <p className="text-xs text-gray-400 m-2 ml-8 text-left">575940-1811</p>
           </div>
@@ -77,10 +77,10 @@ function App() {
           <div className="m-8 space-y-8">
             <DailyVisitors></DailyVisitors>
             <div className="my-8 flex flex-wrap space-x-8">
-              <CardChart title="REALTIME USERS" count="56" percentage="9.8"></CardChart>
-              <CardChart title="TOTAL VISITS" count="54,598" percentage="11.9" red="true"></CardChart>
-              <CardChart title="BOUNCE RATE" count="73.67%" percentage="12.2"></CardChart>
-              <CardChart title="VISIT DURATION" count="1m 4s" percentage="19.6"></CardChart>
+              <CardChart title="REALTIME USERS" count="56" percentage="+9.8" sparklineColor="#367ADD" sparklineData={[20, 15, 21, 18, 12, 16, 11, 8, 14, 18, 17, 14, 20]}></CardChart>
+              <CardChart title="TOTAL VISITS" count="54,598" percentage="-11.9" red="true" sparklineColor="#3EAE4E" sparklineData={[20, 15, 8, 14, 18, 17, 14, 21, 18, 12, 16, 19, 5]}></CardChart>
+              <CardChart title="BOUNCE RATE" count="73.67%" percentage="+12.2" sparklineColor="#6E5FF4" sparklineData={[20, 15, 8, 14, 18, 17, 14, 21, 18, 12, 16, 11, 20]}></CardChart>
+              <CardChart title="VISIT DURATION" count="1m 4s" percentage="+19.6" sparklineColor="#FAD05C" sparklineData={[17, 14, 21, 18, 20, 15, 12, 14, 18, 12, 16, 11, 20]}></CardChart>
             </div>
             <div className="my-8 flex flex-wrap space-x-8">
               <VisitedPages></VisitedPages>

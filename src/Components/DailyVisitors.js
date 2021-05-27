@@ -1,5 +1,22 @@
 import React from 'react'
-// import './DailyVisitors.scss'
+import {Bar} from 'react-chartjs-2';
+
+const state = {
+    labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31'],
+    datasets: [
+      {
+        label: 'Visitors',
+        backgroundColor: 'rgba(30, 106, 218,1)',
+        barThickness: 15,
+        borderRadius: 3,
+        data: [4000, 5000, 6500, 1500, 5000, 6500, 4500, 5500, 1500, 6300, 7012, 5000, 6700, 1600, 3800, 1500, 6300, 1500, 5000, 6400, 6900, 4600, 7100, 1300, 4400, 3900, 2000, 5800, 2100, 3300, 7250]
+      }
+    ]
+  }
+
+const chartStyle = {
+    height: '200px'
+}
 
 export default function DailyVisitors() {
     return (
@@ -12,7 +29,36 @@ export default function DailyVisitors() {
                     <option value="December">December</option>
                 </select>
             </div>
-            <div className="font-semibold py-4 px-8">Chart will appear!</div>
+            <div className="font-semibold h-60">
+                <Bar className={chartStyle}
+                    data={state}
+                    options={{
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        title:{
+                            display: true,
+                            text:'Average Users per month',
+                            fontSize:20,
+                        },
+                        layout: {
+                            padding: 30
+                        },
+                        scales: {
+                            xAxes: [
+                                {
+                                  gridLines: {
+                                    display: false,
+                                  },
+                                },
+                              ],
+                          },
+                        legend:{
+                            display: false
+                        },
+                        
+                    }}
+                />
+            </div>
         </div>
     )
 }
